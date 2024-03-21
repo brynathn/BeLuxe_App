@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".BuyingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/header_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:contentDescription="@string/content_desc_profile_image"
+            android:src="@drawable/header_profile" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcomeBackMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/welcome_back"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/usernameText"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/username"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/burgerIconImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="73dp"
+            android:contentDescription="@string/content_desc_burger_icon"
+            android:src="@drawable/header_burger" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/buyingHistoryText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/buying_history"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/plusIconImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/content_desc_plus_icon"
+                    android:src="@drawable/icon_plus_buying" />
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/buyingHistoryTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:stretchColumns="0">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/purchaseNumberHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_header_left"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/purchase_number_title"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/purchasedDateHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/table_header_middle"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="12dp"
+                        android:paddingRight="40dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/purchased_date_title"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/quantityHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_header_middle"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="12dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/quantity_title"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/shippingStatusHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_header_right"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/shipping_status_title"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/purchaseNumberText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_left_border"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/purchase_number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TableLayout>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/purchasedDateText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/table_cell_border"
+                                android:fontFamily="@font/poppins_regular"
+                                android:gravity="center"
+                                android:paddingLeft="20dp"
+                                android:paddingTop="12dp"
+                                android:paddingRight="20dp"
+                                android:paddingBottom="12dp"
+                                android:text="@string/purchased_date"
+                                android:textColor="@color/black"
+                                android:textSize="10sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+
+                    <TextView
+                        android:id="@+id/quantityText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_cell_border"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/quantity_buying"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/shippingStatusText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_right_border"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
+                        android:text="@string/shipping_status_arrived"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="#750E21"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="15dp"
+            app:fabCradleRoundedCornerRadius="10dp"
+            app:fabCradleVerticalOffset="10dp">
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bottom_nav_transparent_background"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                app:itemIconTint="@drawable/bottom_nav_selector"
+                app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
+                app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
+                app:itemTextColor="@drawable/bottom_nav_selector"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_nav_menu" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cashierButtonBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_checkout"
+            app:backgroundTint="@color/black"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:layout_anchor="@id/bottomAppBar"
+            app:maxImageSize="36dp"
+            app:tint="@color/white" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

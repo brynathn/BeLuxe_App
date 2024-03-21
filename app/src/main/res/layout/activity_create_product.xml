@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CreateProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/header_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backIconImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:contentDescription="@string/content_desc_back_icon"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/addNewProductHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="80dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/add_new_products"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/burgerIconImage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:contentDescription="@string/content_desc_burger_icon"
+            android:src="@drawable/header_burger" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/productImageText"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:fontFamily="@font/poppins_semi"
+                android:text="@string/product_image_title"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/editProductImage"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/border_outlined"
+                android:padding="24dp"
+                android:src="@drawable/icon_image" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/productNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi"
+                android:text="@string/product_name_title"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editProductName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="43dp"
+                android:background="@drawable/border_outlined"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:padding="16dp"
+                android:hint="@string/product_name_placeholder"
+                android:textColorHint="@color/red_transparent"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/productSupplierText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi"
+                android:text="@string/product_supplier_title"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editProductSupplier"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:background="@drawable/border_outlined"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:padding="16dp"
+                android:hint="@string/product_supplier_placeholder"
+                android:textColorHint="@color/red_transparent"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/supplierPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi"
+                android:text="@string/supplier_price_title"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editSupplierPrice"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:background="@drawable/border_outlined"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:padding="16dp"
+                android:hint="@string/supplier_price_placeholder"
+                android:textColorHint="@color/red_transparent"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/productPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi"
+                android:text="@string/product_price_title"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editProductPrice"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/border_outlined"
+                android:ems="10"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:padding="16dp"
+                android:hint="@string/product_price_placeholder"
+                android:textColorHint="@color/red_transparent"
+                android:textColor="@color/red_transparent"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/addProductButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="@string/add_btn"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/red"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="14sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="60dp"
+                android:paddingEnd="60dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
